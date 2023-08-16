@@ -113,6 +113,9 @@ apigee.connect(common.optToOptions(opt))
           if (results.proxies && results.proxies.length) {
             results = results.proxies.map(r => r.name);
           }
+          if (results.sharedFlows && results.sharedFlows.length) {
+            results = results.sharedFlows.map(r => r.name);
+          }
         }
         if (opt.options.regexp) {
           const re1 = new RegExp(opt.options.regexp);
